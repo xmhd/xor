@@ -1,0 +1,25 @@
+# Copyright 2023 Dave Hughes <xor@spunerace.org>
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="TODO"
+DESCRIPTION="TODO"
+HOMEPAGE="https://kernel.org"
+DOWNLOADS="https://cdn.kernel.org/pub/linux/kernel/v6.x/${PV}.tar.xz"
+
+LICENCES="GPL-2"
+SLOT="0"
+PLATFORMS="~amd64"
+MYOPTIONS=""
+
+DEPENDENCIES="
+    build:
+        sys-apps/bc	
+"
+
+pkg_setup() {
+    # TODO: unset ARCH, LDFLAGS
+}
+
+src_unpack() {
+    default
+}
