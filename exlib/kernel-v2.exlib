@@ -1,7 +1,7 @@
 # Copyright 2023 Dave Hughes <xor@spunerace.org>
 # Distributed under the terms of the GNU General Public License v2
 
-export_exlib_phases pkg_setup src_unpack
+export_exlib_phases pkg_pretend pkg_setup src_unpack src_configure src_prepare src_install pkg_postinst
 
 SUMMARY="TODO"
 DESCRIPTION="TODO"
@@ -15,7 +15,7 @@ MYOPTIONS="
     firmware [[ description = [ TODO: description ] ]]
 "
 
-# TODO
+# TODO: not sure what my plan is here
 RESTRICT="test"
 
 DEPENDENCIES="
@@ -29,6 +29,7 @@ WORK="${WORKBASE}/linux-${PV}"
 
 kernel-v2_pkg_pretend() {
     # TODO: check if firmware option is set, warn if not
+    # TODO: check reqs: disk space for build
 }
 
 kernel-v2_pkg_setup() {
@@ -37,4 +38,24 @@ kernel-v2_pkg_setup() {
 
 kernel-v2_src_unpack() {
     default
+}
+
+kernel-v2_src_prepare() {
+    # TODO: apply user patches // i don't think this is a thing in exherbo?
+}
+
+kernel-v2_src_configure() {
+    # TODO: configure
+}
+
+kernel-v2_src_compile() {
+    # TODO: compile
+}
+
+kernel-v2_src_install() {
+    # TODO: install
+}
+
+kernel-v2_pkg_postinst() {
+    # TODO: initramfs
 }
